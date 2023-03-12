@@ -6,9 +6,11 @@
 body{
     font-family: 'Roboto';
     background-color:#f2f1d383;
+    max-width: 90vh;
+    margin: 0 auto;
 }
 .accordion-wrapper{
-    padding:2% 20%;
+    padding:2rem;
 }
 h1{
     font-size: 2.5rem;
@@ -16,11 +18,11 @@ h1{
     padding-bottom:2%;
 }
 .accordion{
-    transition: 0.5s;
+    transition: 0.7s;
 }
 .accordion-item{
     border-top: 2px solid #e1e1e1;
-    transition: 0.4s;
+    transition: 0.7s;
 }
 .accordion-title{
     display: flex;
@@ -33,6 +35,7 @@ h1{
     font-weight: 700;
     transition: .35s;
     color:rgb(8, 141, 223);
+    transition: 0.7s;
 }
 .accordion-title i{
     display: none;
@@ -45,6 +48,7 @@ input{
     width:0;
     margin: 0 auto;
     cursor: pointer;
+    transition: 0.7s;
 }
 .accordion-img>img{
     display: block;
@@ -78,4 +82,35 @@ input:checked ~.accordion-img{
 }
 .accordion-item:hover .accordion-title i{
     transform: rotate(45deg);
+}
+
+@media only screen and (max-width:1920px){
+    h1{
+        font-size: 2.5rem;
+    }
+    .accordion-title{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width:880px){
+    h1{
+        font-size: 1.7rem;
+    }
+    .accordion-title{
+        font-size: 0.9rem;
+    }
+    .accordion-img>img{
+        width:60%;
+    }
+}
+@media only screen and (max-width:470px){
+    h1{
+        font-size: 1.3rem;
+    }
+    .accordion-title{
+        font-size: 0.7rem;
+    }
+    .accordion-img>img{
+        width:80%;
+    }
 }
