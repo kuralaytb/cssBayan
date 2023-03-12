@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url(Roboto-Bold.ttf);
+}
+
+body{
+    font-family: 'Roboto';
+    background-color:#f2f1d383;
+}
+.accordion-wrapper{
+    padding:2% 20%;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-bottom:2%;
+}
+.accordion{
+    transition: 10s;
+}
+.accordion-item{
+    border-top: 2px solid #e1e1e1;
+    transition: 10s;
+}
+input{
+    display: none;
+}
+label{
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: .35s;
+    color:rgb(8, 141, 223);
+}
+.accordion-title i{
+    display: none;
+}
+.accordion-title{
+    display: flex;
+    justify-content: space-between;
+    padding:2% 0;
+}
+.accordion-img{
+    width:30vw;
+    display: none;
+    margin: 0 auto;
+    padding-bottom: 3%;
+}
+.accordion-img>img{
+    width: 100%;
+}
+.accordion:hover label{
+    color:#000;
+    cursor: pointer;
+}
+.accordion:hover .accordion-title i{
+    display: block;
+}
+input:checked ~ .accordion-title i{
+    transform: rotate(45deg);
+}
+input:checked ~.accordion-img{
+    display: block;
+}
+/* input:not(:checked)+label{
+    color:rgb(8, 141, 223);
+} */
+input:checked+label{
+    color:#000;
+} 
+.accordion-item:hover .accordion-img{
+    display: block;
+}
+.accordion-item:hover{
+    cursor: pointer;
+}
+.accordion-item:hover .accordion-title i{
+    transform: rotate(45deg);
+}
