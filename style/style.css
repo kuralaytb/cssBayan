@@ -16,14 +16,17 @@ h1{
     padding-bottom:2%;
 }
 .accordion{
-    transition: 10s;
+    transition: 0.5s;
 }
 .accordion-item{
     border-top: 2px solid #e1e1e1;
-    transition: 10s;
+    transition: 0.4s;
 }
-input{
-    display: none;
+.accordion-title{
+    display: flex;
+    justify-content: space-between;
+    padding:2% 0;
+    cursor: pointer;
 }
 .accordion-title h3{
     font-size: 1.2em;
@@ -34,40 +37,44 @@ input{
 .accordion-title i{
     display: none;
 }
-.accordion-title{
-    display: flex;
-    justify-content: space-between;
-    padding:2% 0;
+input{
+    display: none;
 }
 .accordion-img{
-    width:30vw;
-    display: none;
+    display: block;
+    width:0;
     margin: 0 auto;
-    padding-bottom: 3%;
+    cursor: pointer;
 }
 .accordion-img>img{
-    width: 100%;
-}
-.accordion:hover .accordion-title h3{
-    color:#000;
-}
-.accordion:hover .accordion-title i{
     display: block;
+    width: 50%;
+    height:auto;
+    margin: 0.3rem auto;
+    cursor: pointer;
 }
 input:checked ~ .accordion-title i{
     transform: rotate(45deg);
 }
-input:checked ~.accordion-img{
-    display: block;
-}
 input:checked~ .accordion-title h3{
     color:#000;
 } 
-.accordion-item:hover .accordion-img{
+input:checked ~.accordion-img{
+    margin: 1rem auto 0;
+    width:100%;
+}
+.accordion:hover .accordion-title h3{
+    color:#000;
+}
+.accordion-item:active{
+    opacity: 0.65;
+}
+.accordion:hover .accordion-title i{
     display: block;
 }
-.accordion:hover .accordion-item{
-    cursor: pointer;
+.accordion-item:hover input~ .accordion-img{
+    margin: 1rem auto;
+    width:100%;
 }
 .accordion-item:hover .accordion-title i{
     transform: rotate(45deg);
